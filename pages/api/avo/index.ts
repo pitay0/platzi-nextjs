@@ -4,17 +4,13 @@ import enablePublicAccess from '@cors'
 
 const allAvos = async (req: IncomingMessage, res: ServerResponse) => {
   try {
-    // Generally, you would not want this in your apps.
-    // See more in 'cors.js'
+    
+    //las api siempre sin "api" en minuscula
     await enablePublicAccess(req, res)
 
     const db = new DB()
     const allEntries = await db.getAll()
     const length = allEntries.length
-
-    // Notice: We're manually setting the response object
-    // However Next.JS offers Express-like helpers :)
-    // https://nextjs.org/docs/api-routes/response-helpers
 
     //fue necesario bajar la version de node
     res.statusCode = 200
