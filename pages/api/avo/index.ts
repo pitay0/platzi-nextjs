@@ -15,6 +15,8 @@ const allAvos = async (req: IncomingMessage, res: ServerResponse) => {
     // Notice: We're manually setting the response object
     // However Next.JS offers Express-like helpers :)
     // https://nextjs.org/docs/api-routes/response-helpers
+
+    //fue necesario bajar la version de node
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
     res.setHeader('Access-Control-Allow-Origin', '*')
