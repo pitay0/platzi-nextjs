@@ -22,7 +22,7 @@ const mapProductsToCards = (products: TProduct[]) =>
   ))
 
 const ProductList = ({ products }: ProductListProps) => (
-  <Card.Group itemsPerRow={2} stackable>
+  <Card.Group itemsPerRow={3} stackable>
     {mapProductsToCards(products)}
   </Card.Group>
 )
